@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2 class="title-1">List of companies</h2>
+        <ul>
+          <li id="1">Google</li>
+          <li class="active" id="2">Yahoo</li>
+          <li id="3">Tencent</li>
+        </ul>
+      </div>
+<script>
+    const qs1 = document.querySelector(' .active')
+    const qs2 = document.querySelectorAll(' .active')
+    const qs3 = document.getElementsByClassName('active')
+    const qs4 = document.getElementById('2')
+    const qs5 = document.getElementsByTagName('li')[1]
+    console.log(qs1)
+    console.log(qs2)
+    console.log(qs3)
+    console.log(qs4)
+    console.log(qs5)
+</script>      
+</body>
+</html>

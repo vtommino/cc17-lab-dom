@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="phoneInput" placeholder="Phone Number" />
+    <button id="checkBtn">Check</button>
+    <br />
+    <small id="errorMessage" style="color: red; display: none"></small>
+    <script>
+      const phoneInput = document.getElementById("phoneInput");
+      const checkBtn = document.getElementById("checkBtn");
+      const errorMessage = document.getElementById("errorMessage");
+
+      checkBtn.addEventListener("click", () => {
+        const phoneValue = phoneInput.value.trim();
+        errorMessage.style.display = "none"; // Hide error message initially
+
+        // Check for empty input
+        if (phoneValue === "") {
+          errorMessage.textContent = "Phone number is required";
+          errorMessage.style.display = "block";
+        }
+        // Check for non-numeric characters
+        else if (!/^\d+$/.test(phoneValue)) {
+          errorMessage.textContent = "Phone number is invalid - number only";
+          errorMessage.style.display = "block";
+        }
+        // Check for input length greater than 10 digits
+        else if (phoneValue.length > 10) {
+          errorMessage.textContent = "Invalid length - up to 10 digits";
+          errorMessage.style.display = "block";
+        }
+        // Input is valid
+        else {
+          alert("Your number is valid");
+        }
+      });
+    </script>
+  </body>
+</html>

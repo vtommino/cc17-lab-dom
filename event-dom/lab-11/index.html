@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button type="button" id="increment">+</button>
+    <span id="total">0</span>
+    <button type="button" id="decrement">-</button>
+    <button type="button" id="reset">Reset</button>
+    <script>
+      const incrementBtn = document.getElementById("increment");
+      const decrementBtn = document.getElementById("decrement");
+      const resetBtn = document.getElementById("reset");
+      const total = document.getElementById("total");
+
+      incrementBtn.addEventListener("click", () => {
+        total.innerHTML = +total.innerHTML + 1;
+      });
+
+      decrementBtn.addEventListener("click", () => {
+        total.innerHTML > 0
+          ? (total.innerHTML = total.innerHTML - 1)
+          : total.innerHTML;
+      });
+
+      resetBtn.addEventListener("click", () => {
+        total.innerHTML = 0;
+      });
+    </script>
+  </body>
+</html>

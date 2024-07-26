@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="province">Province:</label>
+      <select name="province" id="province">
+        <option value="Bangkok">Bangkok</option>
+        <option value="Nonthaburi">Nonthaburi</option>
+        <option value="Chonburi">Chonburi</option>
+        <option value="Chiang Mai">Chiang Mai</option>
+        <option value="Phuket">Phuket</option>
+      </select>
+      <br />
+      <br />
+      <label for="district">District:</label>
+      <select name="district" id="district"></select>
+    </form>
+    <script>
+      let provinceDistrictObj = {
+        Bangkok: [
+          "Phaya Thai",
+          "Chatuchak",
+          "Asoke",
+          "Bang Kapi",
+          "Ratchathewi",
+        ],
+        Nonthaburi: [
+          "Mueang Nonthaburi",
+          "Bang Bua Thong",
+          "Bang Yai",
+          "Bang Kruai",
+          "Pak Kret",
+        ],
+        Chonburi: [
+          "Mueang Chonburi",
+          "Si Racha",
+          "Pattaya",
+          "Bang Lamung",
+          "Sattahip",
+        ],
+        "Chiang Mai": [
+          "Mueang Chiang Mai",
+          "San Sai",
+          "San Kamphaeng",
+          "Mae Rim",
+          "Hang Dong",
+        ],
+        Phuket: ["Mueang Phuket", "Kathu", "Thalang"],
+      };
+
+      let provinceSelect = document.getElementById("province");
+      let districtSelect = document.getElementById("district");
+
+      provinceSelect.addEventListener("change", (e) => {
+        let selectedProvince = e.target.value;
+        let districtArr = provinceDistrictObj[selectedProvince] || [];
+        let addHTML = '<option value="">Select District</option>';
+
+        for (let district of districtArr) {
+          addHTML += `<option value="${district}">${district}</option>`;
+        }
+
+        districtSelect.innerHTML = addHTML;
+      });
+    </script>
+  </body>
+</html>

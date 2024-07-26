@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="hideBtn">Hide</button>
+    <button id="showBtn" style="display: none">Show</button>
+    <h1 id="text">Lorem ipsum dolor sit</h1>
+
+    <script>
+      const hideBtn = document.getElementById("hideBtn");
+      const showBtn = document.getElementById("showBtn");
+      const text = document.getElementById("text");
+
+      hideBtn.addEventListener("click", () => {
+        hideBtn.style.display = "none";
+        showBtn.style.display = "block";
+        text.style.display = "none";
+      });
+
+      showBtn.addEventListener("click", () => {
+        hideBtn.style.display = "block";
+        showBtn.style.display = "none";
+        text.style.display = "block";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ol id="elem">
+      <li>Hello</li>
+      <li>World</li>
+    </ol>
+    <!-- จงเขียนฟังก์ชัน clear(elem) เพื่อลบ <li> ภายใน <ol> ทั้งหมด -->
+    <script>
+      function clear(elem) {
+        // const ol = document.getElementById("elem");
+        const ol = document.querySelector("#elem");
+        console.log(ol);
+        ol.remove("li");
+      }
+      clear(elem); // clears the list
+    </script>
+  </body>
+</html>

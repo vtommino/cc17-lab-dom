@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="hideTextButton">Click to hide text</button>
+    <button id="unhideTextButton" style="display: none">
+      Click to unhide text
+    </button>
+    <h1 id="text">Text</h1>
+    <script>
+      const hideTextButton = document.getElementById("hideTextButton");
+      const unhideTextButton = document.getElementById("unhideTextButton");
+      const text = document.getElementById("text");
+
+      hideTextButton.addEventListener("click", function () {
+        hideTextButton.style.display = "none";
+        unhideTextButton.style.display = "block";
+        text.style.display = "none";
+      });
+
+      unhideTextButton.addEventListener("click", function () {
+        hideTextButton.style.display = "block";
+        unhideTextButton.style.display = "none";
+        text.style.display = "block";
+      });
+    </script>
+  </body>
+</html>

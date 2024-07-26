@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const ul = document.createElement("ul");
+      //   let text = prompt("Enter something");
+      //   while (!(text === null || text.trim() === "")) {
+      //     const li = document.createElement("li");
+      //     li.textContext = text;
+      //     ul.append(li);
+      //     text = prompt("Enter Something");
+      //   }
+
+      while (1) {
+        const text = prompt("Enter something");
+        if (text === null || text.trim() === "") break; // if(!text|| !text.trim)
+        li = document.createElement("li");
+        li.textContext = text;
+        ul.append(li);
+      }
+
+      document.body.prepend(ul);
+    </script>
+  </body>
+</html>

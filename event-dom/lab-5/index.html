@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>
+      Nickname:
+      <input name="nickname" />
+    </label>
+    <label>
+      Job:
+      <input name="job" />
+    </label>
+    <script>
+      const inputNickname = document.getElementsByName("nickname")[0];
+      const inputJob = document.getElementsByName("job")[0];
+      function handleName(event) {
+        console.log(event.target.name);
+      }
+      function handleInput(event) {
+        console.log(event.target.value);
+      }
+
+      //   nickname
+      inputNickname.addEventListener("click", handleName);
+      inputNickname.addEventListener("input", handleInput);
+      //job
+      inputJob.addEventListener("click", handleName);
+      inputJob.addEventListener("input", handleInput);
+    </script>
+  </body>
+</html>

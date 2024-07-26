@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Click</button>
+  </body>
+  <script>
+    const button = document.querySelector("button");
+    button.addEventListener("click", () => alert("1")); // (1) ทำงานได้่
+    button.removeEventListener("click", () => alert("1")); // (2) กดแล้วไม่มีอะไรขึ้น เพราะคำสั่งเชื่อมต่อกับ เบอร์ 1
+    button.onclick = () => alert(2); // (3) ทำงานได้
+  </script>
+</html>

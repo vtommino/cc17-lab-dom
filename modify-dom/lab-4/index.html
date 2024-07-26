@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <style>
+      .btn {
+        background-color: #007bff; /* ตั้งค่าสีพื้นหลังเริ่มต้น */
+        color: white; /* สีข้อความ */
+        padding: 10px 20px; /* ขนาดและช่องว่างของปุ่ม */
+        border: none; /* ไม่มีเส้นขอบ */
+        border-radius: 5px; /* มุมโค้ง */
+        cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็นรูปขีดแนวนอนเมื่อเมาส์ไปชี้ */
+        animation: changeColor 3s infinite; /* เรียกใช้ animation ชื่อ changeColor ที่เปลี่ยนสีทุกๆ 3 วินาที และทำซ้ำอย่างไม่สิ้นสุด */
+      }
+      @keyframes changeColor {
+        0% {
+          background-color: #007bff;
+        } /* เริ่มต้นด้วยสีเดิม */
+        50% {
+          background-color: #ff6347;
+        } /* เปลี่ยนสีตอนครึ่งทาง */
+        100% {
+          background-color: #007bff;
+        } /* สีเดิมที่สิ้นสุด */
+      }
+    </style> -->
+  </head>
+  <!-- จงเขียนคำสั่งเพื่อเปลี่ยนสีพื้นหลังของ button ให้เป็นสีแดงเมื่อเวลาผ่านไป 3 วินาที หลังจากนั้นอีก 3 วินาทีให้เปลี่ยนสีพื้นหลังกลับมาเหมือนเดิม
+ใช้วิธีเปลี่ยน property style ของ element object
+ใช้วิธีเพิ่มลด class -->
+  <body>
+    <button class="btn">Submit</button>
+    <script>
+      const bgBtn = document.querySelector(".btn");
+
+      console.log(bgBtn);
+      function changeColor() {
+        setTimeout(() => {
+          bgBtn.style.backgroundColor = "red";
+        }, 3000);
+
+        setTimeout(() => {
+          bgBtn.style.backgroundColor = "";
+        }, 6000); // 6000 ms (3 seconds after changing the color)
+      }
+      changeColor();
+    </script>
+  </body>
+</html>

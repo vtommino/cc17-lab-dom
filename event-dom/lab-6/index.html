@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="hide-btn">Click to hide me</button>
+    <!-- <button id="unhide-btn" style="display: none">Unhide</button> -->
+    <script>
+      const hideButton = document.getElementById("hide-btn");
+      hideButton.addEventListener("click", function () {
+        hideButton.hidden = true;
+      });
+
+      // Toggle
+      //   const unhideButton = document.getElementById("unhide-btn");
+
+      //   hideButton.addEventListener("click", function () {
+      //     hideButton.style.display = "none";
+      //     unhideButton.style.display = "block";
+      //   });
+
+      //   unhideButton.addEventListener("click", function () {
+      //     hideButton.style.display = "block";
+      //     unhideButton.style.display = "none";
+      //   });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- #1 HTML Attribute -->
+    <!-- <form>
+      <button onclick="buttonClick()">Submit</button>
+    </form> -->
+
+    <!-- #2 DOM Property -->
+    <!-- <form>
+      <button class="a">Submit</button>
+    </form> -->
+
+    <!-- #3 Event Listener -->
+    <form>
+      <button type="submit">Submit</button>
+    </form>
+    <script>
+      //   #1 HTML attribute
+      //   function buttonClick() {
+      //     alert("Form is submitted");
+      //   }
+
+      //   #2 DOM property
+      //   const a = document.querySelector(".a");
+      //   a.onclick = () => {
+      //     alert("Form is submitted");
+      //   };
+
+      //   #3 Event Listener
+      const submit = document.querySelector("button");
+      const form = document.querySelector("form");
+      function eventHandler(event) {
+        alert("form is submitted");
+      }
+
+      submit.addEventListener("click", eventHandler);
+    </script>
+  </body>
+</html>
